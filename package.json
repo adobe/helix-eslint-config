@@ -1,6 +1,6 @@
 {
-  "name": "@adobe/helix-eslint-config",
-  "version": "1.0.0",
+  "name": "@adobe/eslint-config-helix",
+  "version": "0.0.1",
   "description": "Helix's ESLint config, based on Airbnb's style guide",
   "main": "index.js",
   "scripts": {
