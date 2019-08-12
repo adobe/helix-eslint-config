@@ -1,0 +1,45 @@
+{
+  "name": "@adobe/helix-eslint-config",
+  "version": "1.0.0",
+  "description": "Helix's ESLint config, based on Airbnb's style guide",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "semantic-release": "semantic-release",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/helix-eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "helix"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/adobe/helix-eslint-config/issues"
+  },
+  "homepage": "https://github.com/adobe/helix-eslint-config",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "semantic-release": "^15.13.19"
+  },
+  "peerDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-header": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}

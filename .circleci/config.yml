@@ -1,0 +1,65 @@
+version: 2.1
+executors:
+  node8:
+    docker:
+      - image: circleci/node:8
+    environment:
+      NPM_CONFIG_PREFIX: ~/.npm-global
+
+commands:
+  setup:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ arch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: install npm 6.10.2
+          command: sudo npm -g install npm@6.10.2
+      - run:
+          name: Installing Dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ arch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: prepare test git user
+          command: git config --global user.email "circleci@example.com" && git config --global user.name "CircleCi Build"
+
+jobs:
+  build:
+    executor: node8
+    steps:
+      - setup
+      - run:
+          name: Test
+          command: npm run test
+  semantic-release:
+    executor: node8
+    steps:
+      - setup
+      - run:
+          name: revert changes to package-lock.json
+          command: git checkout -- package-lock.json
+      - run:
+          name: configure npm registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: Semantic Release
+          command: npm run semantic-release
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+      # the semantic-release jobs needs a $NPM_TOKEN environment to be setup and also have a
+      # valid SSH_KEY added for the `github.com` host.
+      - semantic-release:
+          requires:
+            - build
+          filters:
+            branches:
+              # rename to `master` once $NPM_TOKEN and github.com ssh key is setup.
+              only: master_disabled
