@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/adobe/helix-eslint-config/compare/v1.0.0...v1.0.1) (2019-08-29)
+
+
+### Bug Fixes
+
+* **release:** include npm release again ([997e5e6](https://github.com/adobe/helix-eslint-config/commit/997e5e6))
+
 # 1.0.0 (2019-08-29)
 
 
