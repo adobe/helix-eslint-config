@@ -38,7 +38,16 @@ module.exports = {
     'no-else-return': 'off',
 
     // allow dangling underscores for 'fields'
-    'no-underscore-dangle': ['error', { allowAfterThis: true }],
+    'no-underscore-dangle': ['error', {
+      allowAfterThis: true,
+      allow: [
+        '__ow_method',
+        '__ow_headers',
+        '__ow_path',
+        '__ow_user',
+        '__ow_body',
+        '__ow_query'],
+    }],
 
     // enforce license header
     'header/header': [2, 'block', ['',
