@@ -62,4 +62,4 @@ workflows:
           filters:
             branches:
               # rename to `master` once $NPM_TOKEN and github.com ssh key is setup.
-              only: master_disabled
+              only: master
