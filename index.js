@@ -49,6 +49,15 @@ module.exports = {
         '__ow_query'],
     }],
 
+    // allow '_' as a throw-away variable
+    'no-unused-vars': ['error', {
+      argsIgnorePattern: '^_$',
+    }],
+
+    'no-shadow': ['error', {
+      allow: ['_'],
+    }],
+
     // enforce license header
     'header/header': [2, 'block', ['',
       { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2019 Adobe. All rights reserved.' },
