@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/adobe/helix-eslint-config/compare/v1.0.1...v1.1.0) (2019-09-02)
+
+
+### Features
+
+* **eslint:** allow _ as an unused and shadowed argument name ([34965ee](https://github.com/adobe/helix-eslint-config/commit/34965ee))
+
 ## [1.0.1](https://github.com/adobe/helix-eslint-config/compare/v1.0.0...v1.0.1) (2019-08-29)
 
 ### Bug Fixes
