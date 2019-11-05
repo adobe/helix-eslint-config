@@ -28,12 +28,12 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.5",
-    "@semantic-release/git": "7.0.17",
+    "@semantic-release/git": "7.0.18",
     "@semantic-release/github": "5.5.5",
     "eslint": "6.6.0",
     "eslint-plugin-header": "3.0.0",
     "eslint-plugin-import": "2.18.2",
-    "semantic-release": "15.13.28"
+    "semantic-release": "15.13.30"
   },
   "peerDependencies": {
     "eslint": "^6.1.0",
