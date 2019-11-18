@@ -33,7 +33,7 @@
     "eslint": "6.6.0",
     "eslint-plugin-header": "3.0.0",
     "eslint-plugin-import": "2.18.2",
-    "semantic-release": "15.13.30"
+    "semantic-release": "15.13.31"
   },
   "peerDependencies": {
     "eslint": "^6.1.0",
