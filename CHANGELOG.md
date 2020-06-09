@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/adobe/helix-eslint-config/compare/v1.1.0...v1.1.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* update airbnb ([19e0ac6](https://github.com/adobe/helix-eslint-config/commit/19e0ac68ec806611fcaeb970bd776af266c26020))
+
 # [1.1.0](https://github.com/adobe/helix-eslint-config/compare/v1.0.1...v1.1.0) (2019-09-02)
 
 
