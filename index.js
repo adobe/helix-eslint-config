@@ -71,5 +71,9 @@ module.exports = {
       ' * governing permissions and limitations under the License.',
       ' ',
     ]],
+
+    'id-match': ['error', '^(?!.*?([wW][hH][iI][tT][eE]|[bB][lL][aA][cC][kK]).*[lL][iI][sS][tT]).*$', {
+      properties: true,
+    }],
   },
 };
