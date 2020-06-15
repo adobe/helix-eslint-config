@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/adobe/helix-eslint-config/compare/v1.1.1...v1.1.2) (2020-06-15)
+
+
+### Bug Fixes
+
+* **index:** copyright year 2020 ([0261003](https://github.com/adobe/helix-eslint-config/commit/0261003b2ceea02e0269c4d4bd1e7f332435b716))
+* **index:** no longer allow charged language in identifiers ([6788437](https://github.com/adobe/helix-eslint-config/commit/6788437f73beefb0e7fdcd03096738fc8f3b0699))
+
 ## [1.1.1](https://github.com/adobe/helix-eslint-config/compare/v1.1.0...v1.1.1) (2020-06-09)
 
 
