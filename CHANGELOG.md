@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/adobe/helix-eslint-config/compare/v1.1.2...v1.1.3) (2020-06-16)
+
+
+### Bug Fixes
+
+* **deps:** update external ([#39](https://github.com/adobe/helix-eslint-config/issues/39)) ([da709aa](https://github.com/adobe/helix-eslint-config/commit/da709aa6a2c02e000f89cc7b12e4b822710dbd19))
+
 ## [1.1.2](https://github.com/adobe/helix-eslint-config/compare/v1.1.1...v1.1.2) (2020-06-15)
 
 
