@@ -32,7 +32,7 @@
     "@semantic-release/github": "7.0.7",
     "eslint": "7.3.1",
     "eslint-plugin-header": "3.0.0",
-    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-import": "2.22.0",
     "semantic-release": "17.1.1"
   },
   "peerDependencies": {
