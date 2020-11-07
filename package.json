@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/adobe/helix-eslint-config#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "14.2.0"
+    "eslint-config-airbnb-base": "14.2.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
     "@semantic-release/github": "7.1.1",
-    "eslint": "7.12.1",
+    "eslint": "7.13.0",
     "eslint-plugin-header": "3.1.0",
     "eslint-plugin-import": "2.22.1",
     "semantic-release": "17.2.2"
