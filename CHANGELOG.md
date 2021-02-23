@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/adobe/helix-eslint-config/compare/v1.1.3...v1.1.4) (2021-02-23)
+
+
+### Bug Fixes
+
+* **template:** update to 2021 ([7d4ec42](https://github.com/adobe/helix-eslint-config/commit/7d4ec42d6dcd391403623d1d4c6dab9dc3920634))
+
 ## [1.1.3](https://github.com/adobe/helix-eslint-config/compare/v1.1.2...v1.1.3) (2020-06-16)
 
 
