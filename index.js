@@ -58,6 +58,9 @@ module.exports = {
       allow: ['_'],
     }],
 
+    // don't enforce extension rules
+    'import/extensions': 0,
+
     // enforce license header
     'header/header': [2, 'block', ['',
       { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2021 Adobe. All rights reserved.' },
