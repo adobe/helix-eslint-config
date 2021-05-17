@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/adobe/helix-eslint-config/compare/v1.1.4...v1.1.5) (2021-05-17)
+
+
+### Bug Fixes
+
+* ignore extension rules of updated plugin-import ([04ad78d](https://github.com/adobe/helix-eslint-config/commit/04ad78daae0586a0afd964cf0aec01bdbf999d05))
+
 ## [1.1.4](https://github.com/adobe/helix-eslint-config/compare/v1.1.3...v1.1.4) (2021-02-23)
 
 
