@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/adobe/helix-eslint-config/compare/v1.1.5...v1.2.0) (2021-10-01)
+
+
+### Features
+
+* support es2020 / ES11 ([#108](https://github.com/adobe/helix-eslint-config/issues/108)) ([108c8f9](https://github.com/adobe/helix-eslint-config/commit/108c8f951a248cd2411c529c1f38f132601d1eae))
+
 ## [1.1.5](https://github.com/adobe/helix-eslint-config/compare/v1.1.4...v1.1.5) (2021-05-17)
 
 
