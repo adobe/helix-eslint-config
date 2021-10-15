@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/adobe/helix-eslint-config/compare/v1.2.0...v1.3.0) (2021-10-15)
+
+
+### Features
+
+* trigger release ([b2d455f](https://github.com/adobe/helix-eslint-config/commit/b2d455f58ad05cb7d06168ccff055ad29dcaa873))
+
 # [1.2.0](https://github.com/adobe/helix-eslint-config/compare/v1.1.5...v1.2.0) (2021-10-01)
 
 
