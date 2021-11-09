@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/adobe/helix-eslint-config/compare/v1.3.0...v1.3.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* **deps:** update airbnb config to 15.0 ([46f24d9](https://github.com/adobe/helix-eslint-config/commit/46f24d9fb150b2cf95945b533040a4ea0f205259))
+
 # [1.3.0](https://github.com/adobe/helix-eslint-config/compare/v1.2.0...v1.3.0) (2021-10-15)
 
 
