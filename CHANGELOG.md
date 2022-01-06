@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/adobe/helix-eslint-config/compare/v1.3.1...v1.3.2) (2022-01-06)
+
+
+### Bug Fixes
+
+* **index:** happy 2022! ([59839ad](https://github.com/adobe/helix-eslint-config/commit/59839ad6479a01a00da4ec9af8fd9b14d8286e5f))
+
 ## [1.3.1](https://github.com/adobe/helix-eslint-config/compare/v1.3.0...v1.3.1) (2021-11-09)
 
 
