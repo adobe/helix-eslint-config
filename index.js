@@ -16,17 +16,20 @@ module.exports = {
 
   env: {
     node: true,
-    es2020: true,
+    es6: true,
   },
   parserOptions: {
-    sourceType: 'script',
-    ecmaVersion: 11,
+    sourceType: 'module',
+    ecmaVersion: 2022,
   },
   plugins: [
     'header',
+    'import',
   ],
   rules: {
     strict: 0,
+
+    'import/prefer-default-export': 0,
 
     // Forbid multiple statements in one line
     'max-statements-per-line': ['error', { max: 1 }],
@@ -59,11 +62,11 @@ module.exports = {
     }],
 
     // don't enforce extension rules
-    'import/extensions': 0,
+    'import/extensions': [2, 'ignorePackages'],
 
     // enforce license header
     'header/header': [2, 'block', ['',
-      { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2022 Adobe. All rights reserved.' },
+      { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2023 Adobe. All rights reserved.' },
       ' * This file is licensed to you under the Apache License, Version 2.0 (the "License");',
       ' * you may not use this file except in compliance with the License. You may obtain a copy',
       ' * of the License at http://www.apache.org/licenses/LICENSE-2.0',
@@ -78,5 +81,17 @@ module.exports = {
     'id-match': ['error', '^(?!.*?([wW][hH][iI][tT][eE]|[bB][lL][aA][cC][kK]).*[lL][iI][sS][tT]).*$', {
       properties: true,
     }],
+  },
+  settings: {
+    // see
+    // - https://github.com/import-js/eslint-plugin-import/issues/1810
+    // - https://www.npmjs.com/package/eslint-import-resolver-exports
+    'import/resolver': {
+      exports: {},
+    },
+  },
+  globals: {
+    __rootdir: true,
+    __testdir: true,
   },
 };
