@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/adobe/helix-eslint-config/compare/v1.3.2...v2.0.0) (2023-01-23)
+
+
+### Bug Fixes
+
+* upgrade to 2023 and default to modern ecma version ([7116410](https://github.com/adobe/helix-eslint-config/commit/71164103605a9b50033b3c40e8c47b9401ea01f6))
+
+
+### BREAKING CHANGES
+
+* default source type is module and requires eslint-import-resolver-exports plugin.
+
 ## [1.3.2](https://github.com/adobe/helix-eslint-config/compare/v1.3.1...v1.3.2) (2022-01-06)
 
 
