@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/adobe/helix-eslint-config/compare/v2.0.0...v2.0.1) (2023-01-23)
+
+
+### Bug Fixes
+
+* move plugins to dependencies ([15c7052](https://github.com/adobe/helix-eslint-config/commit/15c7052fdf26a905c784cde06dc3e3aae9425ea3))
+
 # [2.0.0](https://github.com/adobe/helix-eslint-config/compare/v1.3.2...v2.0.0) (2023-01-23)
 
 
