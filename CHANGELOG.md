@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/adobe/helix-eslint-config/compare/v2.0.1...v2.0.2) (2023-02-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-import-resolver-exports to v1.0.0-beta.5 ([c7d8183](https://github.com/adobe/helix-eslint-config/commit/c7d8183c0ba143475bbd2a6303ebdcfa58b60ba0))
+
 ## [2.0.1](https://github.com/adobe/helix-eslint-config/compare/v2.0.0...v2.0.1) (2023-01-23)
 
 
