@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/adobe/helix-eslint-config/compare/v2.0.2...v2.0.3) (2023-08-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to v2.28.1 ([9f138d3](https://github.com/adobe/helix-eslint-config/commit/9f138d3efe99d0eccad732f37382879d1186f0a4))
+
 ## [2.0.2](https://github.com/adobe/helix-eslint-config/compare/v2.0.1...v2.0.2) (2023-02-25)
 
 
