@@ -32,8 +32,8 @@
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "eslint": "8.47.0",
-    "semantic-release": "21.0.7"
+    "eslint": "8.48.0",
+    "semantic-release": "21.1.1"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
