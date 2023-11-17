@@ -55,6 +55,7 @@ module.exports = {
     // allow '_' as a throw-away variable
     'no-unused-vars': ['error', {
       argsIgnorePattern: '^_$',
+      varsIgnorePattern: '^_$',
     }],
 
     'no-shadow': ['error', {
