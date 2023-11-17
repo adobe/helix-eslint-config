@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/adobe/helix-eslint-config/compare/v2.0.4...v2.0.5) (2023-11-17)
+
+
+### Bug Fixes
+
+* ignore underscore throw-away variable ([#198](https://github.com/adobe/helix-eslint-config/issues/198)) ([2279802](https://github.com/adobe/helix-eslint-config/commit/2279802ed7f305352e682bcad892f4634a8f371b))
+
 ## [2.0.4](https://github.com/adobe/helix-eslint-config/compare/v2.0.3...v2.0.4) (2023-10-28)
 
 
