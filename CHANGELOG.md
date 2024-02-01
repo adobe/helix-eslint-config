@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/adobe/helix-eslint-config/compare/v2.0.5...v2.0.6) (2024-02-01)
+
+
+### Bug Fixes
+
+* **template:** it's 2024, baby ([eda47a3](https://github.com/adobe/helix-eslint-config/commit/eda47a326e1d897de1c896753b8441fd8f452055))
+
 ## [2.0.5](https://github.com/adobe/helix-eslint-config/compare/v2.0.4...v2.0.5) (2023-11-17)
 
 
