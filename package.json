@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
+    "semantic-release-dry": "semantic-release --dry-run --branches $CI_BRANCH",
     "semantic-release": "semantic-release",
     "test": "npm run lint"
   },
