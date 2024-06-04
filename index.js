@@ -10,7 +10,6 @@
  * governing permissions and limitations under the License.
  */
 import globals from 'globals';
-import header from 'eslint-plugin-header';
 
 import bestPractices from './rules/best-practices.js';
 import errors from './rules/errors.js';
@@ -19,8 +18,14 @@ import node from './rules/node.js';
 import strict from './rules/strict.js';
 import variables from './rules/variables.js';
 
+const common = {
+  ...bestPractices,
+  ...errors,
+  ...es6,
+  ...node,
+  ...strict,
+  ...variables,
 
-export default {
   languageOptions: {
     ecmaVersion: 2022,
     sourceType: "module",
@@ -29,17 +34,7 @@ export default {
       ...globals.es6,
     }
   },
-  plugins: {
-    header,
-  },
   rules: {
-    ...bestPractices,
-    ...errors,
-    ...es6,
-    ...node,
-    ...strict,
-    ...variables,
-
     strict: 0,
 
     'import/prefer-default-export': 0,
@@ -96,7 +91,25 @@ export default {
       properties: true,
     }],
   },
+  files: ['*.js'],
   linterOptions: {
     reportUnusedDisableDirectives: 'off',
   },
 };
+
+const source = {
+  ...common,
+  files: ['src/**/*.js', 'test/dev/*.mjs'],
+};
+
+const test = {
+  ...common,
+  languageOptions: {
+    globals: {
+      ...globals.mocha,
+    },
+  },
+  files: ['test/**/*.js'],
+};
+
+export { source, test };
