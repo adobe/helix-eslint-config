@@ -9,24 +9,38 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-module.exports = {
-  extends: [
-    'eslint-config-airbnb-base',
-  ].map(require.resolve),
+import globals from 'globals';
+import header from 'eslint-plugin-header';
 
-  env: {
-    node: true,
-    es6: true,
-  },
-  parserOptions: {
-    sourceType: 'module',
+import bestPractices from './rules/best-practices.js';
+import errors from './rules/errors.js';
+import es6 from './rules/es6.js';
+import node from './rules/node.js';
+import strict from './rules/strict.js';
+import variables from './rules/variables.js';
+
+
+export default {
+  languageOptions: {
     ecmaVersion: 2022,
+    sourceType: "module",
+    globals: {
+      ...globals.node,
+      ...globals.es6,
+      ...globals.mocha,
+    }
   },
-  plugins: [
-    'header',
-    'import',
-  ],
+  plugins: {
+    header,
+  },
   rules: {
+    ...bestPractices,
+    ...errors,
+    ...es6,
+    ...node,
+    ...strict,
+    ...variables,
+
     strict: 0,
 
     'import/prefer-default-export': 0,
@@ -63,36 +77,27 @@ module.exports = {
     }],
 
     // don't enforce extension rules
-    'import/extensions': [2, 'ignorePackages'],
+    // 'import/extensions': [2, 'ignorePackages'],
 
     // enforce license header
-    'header/header': [2, 'block', ['',
-      { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2024 Adobe. All rights reserved.' },
-      ' * This file is licensed to you under the Apache License, Version 2.0 (the "License");',
-      ' * you may not use this file except in compliance with the License. You may obtain a copy',
-      ' * of the License at http://www.apache.org/licenses/LICENSE-2.0',
-      ' *',
-      ' * Unless required by applicable law or agreed to in writing, software distributed under',
-      ' * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS',
-      ' * OF ANY KIND, either express or implied. See the License for the specific language',
-      ' * governing permissions and limitations under the License.',
-      ' ',
-    ]],
+    // 'header/header': [2, 'block', ['',
+    //   { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2024 Adobe. All rights reserved.' },
+    //   ' * This file is licensed to you under the Apache License, Version 2.0 (the "License");',
+    //   ' * you may not use this file except in compliance with the License. You may obtain a copy',
+    //   ' * of the License at http://www.apache.org/licenses/LICENSE-2.0',
+    //   ' *',
+    //   ' * Unless required by applicable law or agreed to in writing, software distributed under',
+    //   ' * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS',
+    //   ' * OF ANY KIND, either express or implied. See the License for the specific language',
+    //   ' * governing permissions and limitations under the License.',
+    //   ' ',
+    // ]],
 
     'id-match': ['error', '^(?!.*?([wW][hH][iI][tT][eE]|[bB][lL][aA][cC][kK]).*[lL][iI][sS][tT]).*$', {
       properties: true,
     }],
   },
-  settings: {
-    // see
-    // - https://github.com/import-js/eslint-plugin-import/issues/1810
-    // - https://www.npmjs.com/package/eslint-import-resolver-exports
-    'import/resolver': {
-      exports: {},
-    },
-  },
-  globals: {
-    __rootdir: true,
-    __testdir: true,
+  linterOptions: {
+    reportUnusedDisableDirectives: 'off',
   },
 };
