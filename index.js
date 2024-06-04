@@ -27,7 +27,6 @@ export default {
     globals: {
       ...globals.node,
       ...globals.es6,
-      ...globals.mocha,
     }
   },
   plugins: {
