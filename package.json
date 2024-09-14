@@ -34,7 +34,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "eslint": "8.57.0",
-    "semantic-release": "24.1.0"
+    "semantic-release": "24.1.1"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
