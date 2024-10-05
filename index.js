@@ -60,6 +60,7 @@ module.exports = {
 
     'no-shadow': ['error', {
       allow: ['_'],
+      builtinGlobals: true,
     }],
 
     // don't enforce extension rules
