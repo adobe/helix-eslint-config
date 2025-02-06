@@ -1,3 +1,10 @@
+## [2.0.9](https://github.com/adobe/helix-eslint-config/compare/v2.0.8...v2.0.9) (2025-02-06)
+
+
+### Bug Fixes
+
+* update copyright year ([#224](https://github.com/adobe/helix-eslint-config/issues/224)) ([f66bdf2](https://github.com/adobe/helix-eslint-config/commit/f66bdf20b1bd78f9d4e878e1b8824e727955b86b))
+
 ## [2.0.8](https://github.com/adobe/helix-eslint-config/compare/v2.0.7...v2.0.8) (2024-10-05)
 
 
