@@ -1,8 +1,10 @@
 # Helix eslint config
 
-Eslint config used in helix projects.
+ESLint config used in helix projects.
 
 ## Usage
+
+### For ESLint v9.x
 
 In your `eslint.config.js`, import the `recommended` settings and add your ignores, e.g.:
 
