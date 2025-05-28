@@ -10,8 +10,28 @@
  * governing permissions and limitations under the License.
  */
 
+function headerLineMatches(expected, actual) {
+  if (expected.pattern) {
+    return new RegExp(expected.pattern).test(actual);
+  }
+  return expected === actual;
+}
+
+function headerMatches(expected, actual) {
+  if (expected.length !== actual.length) {
+    return false;
+  }
+  for (let i = 0; i < expected.length; i += 1) {
+    if (!headerLineMatches(expected[i], actual[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
 /**
  * Returns the header comment.
+ *
  * @param {Program} program program node
  * @param {import('eslint').Rule.RuleContext} context rule context
  * @returns header comment or null
@@ -66,6 +86,13 @@ export default {
             context.report({
               node,
               messageId: 'missingHeader',
+            });
+          }
+          const { options: [{ block }] } = context;
+          if (!headerMatches(block, headerComment)) {
+            context.report({
+              node,
+              messageId: 'headerContentMismatch',
             });
           }
         },
