@@ -9,17 +9,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-import { common, source, test } from './src/index.js';
+import { common } from './src/index.js';
 
 export default [
   common,
-  {
-    ...source,
-  },
-  {
-    ...test,
-  },
-  {
-    ignores: ["rules/*"],
-  }
 ];

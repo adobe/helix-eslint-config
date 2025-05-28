@@ -14,7 +14,7 @@ import globals from 'globals';
 export default {
   languageOptions: {
     ecmaVersion: 6,
-    sourceType: "module",
+    sourceType: 'module',
     parserOptions: {
       ecmaFeatures: {
         generators: false,
@@ -87,7 +87,7 @@ export default {
     // https://eslint.org/docs/rules/no-restricted-imports
     'no-restricted-imports': ['off', {
       paths: [],
-      patterns: []
+      patterns: [],
     }],
 
     // disallow to use this/super before super() calling in constructors.

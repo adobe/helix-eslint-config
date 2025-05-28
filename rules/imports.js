@@ -1,20 +1,26 @@
-module.exports = {
-  env: {
-    es6: true
+/*
+ * Copyright 2024 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+import importPlugin from 'eslint-plugin-import';
+
+export default {
+  plugins: {
+    import: importPlugin,
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
-  },
-  plugins: [
-    'import'
-  ],
 
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.json']
-      }
+        extensions: ['.mjs', '.js', '.json'],
+      },
     },
     'import/extensions': [
       '.js',
@@ -91,7 +97,7 @@ module.exports = {
         '**/protractor.conf.js', // protractor config
         '**/protractor.conf.*.js', // protractor config
         '**/karma.conf.js', // karma config
-        '**/.eslintrc.js' // eslint config
+        '**/.eslintrc.js', // eslint config
       ],
       optionalDependencies: false,
     }],
@@ -260,6 +266,7 @@ module.exports = {
       unusedExports: true,
     }],
 
+    // eslint-disable-next-line max-len
     // Reports the use of import declarations with CommonJS exports in any module except for the main module.
     // https://github.com/import-js/eslint-plugin-import/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-import-module-exports.md
     'import/no-import-module-exports': ['error', {
