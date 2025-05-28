@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -9,24 +9,47 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-module.exports = {
-  extends: [
-    'eslint-config-airbnb-base',
-  ].map(require.resolve),
+import globals from 'globals';
+import { defineConfig } from '@eslint/config-helpers';
 
-  env: {
-    node: true,
-    es6: true,
-  },
-  parserOptions: {
-    sourceType: 'module',
+import bestPractices from './rules/best-practices.js';
+import errors from './rules/errors.js';
+import node from './rules/node.js';
+import style from './rules/style.js';
+import variables from './rules/variables.js';
+import es6 from './rules/es6.js';
+import imports from './rules/imports.js';
+import strict from './rules/strict.js';
+
+import header from './rules/header.js';
+
+const base = {
+  languageOptions: {
     ecmaVersion: 2022,
+    sourceType: 'module',
+    globals: {
+      ...globals.node,
+      ...globals.es6,
+      __rootdir: true,
+    },
+    parserOptions: {
+      ...es6.languageOptions.parserOptions,
+    },
   },
-  plugins: [
-    'header',
-    'import',
-  ],
+  plugins: {
+    header,
+    ...imports.plugins,
+  },
   rules: {
+    ...bestPractices.rules,
+    ...errors.rules,
+    ...node.rules,
+    ...style.rules,
+    ...variables.rules,
+    ...es6.rules,
+    ...imports.rules,
+    ...strict.rules,
+
     strict: 0,
 
     'import/prefer-default-export': 0,
@@ -56,6 +79,7 @@ module.exports = {
     'no-unused-vars': ['error', {
       argsIgnorePattern: '^_$',
       varsIgnorePattern: '^_$',
+      caughtErrors: 'none',
     }],
 
     'no-shadow': ['error', {
@@ -63,36 +87,60 @@ module.exports = {
     }],
 
     // don't enforce extension rules
-    'import/extensions': [2, 'ignorePackages'],
+    'import/extensions': ['error', 'ignorePackages'],
 
     // enforce license header
-    'header/header': [2, 'block', ['',
-      { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.', template: ' * Copyright 2025 Adobe. All rights reserved.' },
-      ' * This file is licensed to you under the Apache License, Version 2.0 (the "License");',
-      ' * you may not use this file except in compliance with the License. You may obtain a copy',
-      ' * of the License at http://www.apache.org/licenses/LICENSE-2.0',
-      ' *',
-      ' * Unless required by applicable law or agreed to in writing, software distributed under',
-      ' * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS',
-      ' * OF ANY KIND, either express or implied. See the License for the specific language',
-      ' * governing permissions and limitations under the License.',
-      ' ',
-    ]],
+    'header/header': ['error', {
+      block: [
+        '',
+        { pattern: ' * Copyright \\d{4} Adobe\\. All rights reserved\\.' },
+        ' * This file is licensed to you under the Apache License, Version 2.0 (the "License");',
+        ' * you may not use this file except in compliance with the License. You may obtain a copy',
+        ' * of the License at http://www.apache.org/licenses/LICENSE-2.0',
+        ' *',
+        ' * Unless required by applicable law or agreed to in writing, software distributed under',
+        ' * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS',
+        ' * OF ANY KIND, either express or implied. See the License for the specific language',
+        ' * governing permissions and limitations under the License.',
+        ' ',
+      ],
+    }],
 
     'id-match': ['error', '^(?!.*?([wW][hH][iI][tT][eE]|[bB][lL][aA][cC][kK]).*[lL][iI][sS][tT]).*$', {
       properties: true,
     }],
   },
   settings: {
-    // see
-    // - https://github.com/import-js/eslint-plugin-import/issues/1810
-    // - https://www.npmjs.com/package/eslint-import-resolver-exports
-    'import/resolver': {
-      exports: {},
+    ...imports.settings,
+  },
+  linterOptions: {
+    reportUnusedDisableDirectives: 'off',
+  },
+};
+
+const source = {
+  ...base,
+  files: ['src/**/*.js', 'test/dev/*.mjs'],
+};
+
+const test = {
+  ...base,
+  files: ['test/**/*.js'],
+  languageOptions: {
+    ...base.languageOptions,
+    globals: {
+      ...base.languageOptions.globals,
+      ...globals.mocha,
+      __testdir: true,
     },
   },
-  globals: {
-    __rootdir: true,
-    __testdir: true,
-  },
+};
+
+const recommended = defineConfig([
+  source,
+  test,
+]);
+
+export {
+  base, source, test, recommended,
 };

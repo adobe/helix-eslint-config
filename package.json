@@ -3,6 +3,7 @@
   "version": "2.0.9",
   "description": "Helix's ESLint config, based on Airbnb's style guide",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "semantic-release-dry": "semantic-release --dry-run --branches $CI_BRANCH",
@@ -25,19 +26,18 @@
   },
   "homepage": "https://github.com/adobe/helix-eslint-config#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-import-resolver-exports": "1.0.0-beta.5",
-    "eslint-plugin-header": "3.1.1",
-    "eslint-plugin-import": "2.31.0"
+    "@eslint/config-helpers": "0.2.2",
+    "eslint-plugin-import": "2.31.0",
+    "globals": "15.3.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "eslint": "8.57.1",
+    "eslint": "9.4.0",
     "semantic-release": "24.2.5"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^9.0.0"
   },
   "engines": {
     "node": ">= 12"
