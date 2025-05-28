@@ -33,7 +33,6 @@ const common = {
     parserOptions: {
       ...es6.languageOptions.parserOptions,
     },
-    ...node.languageOptions,
   },
   plugins: {
     header,
