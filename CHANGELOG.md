@@ -1,3 +1,24 @@
+## [2.0.9](https://github.com/adobe/helix-eslint-config/compare/v2.0.8...v2.0.9) (2025-02-06)
+
+
+### Bug Fixes
+
+* update copyright year ([#224](https://github.com/adobe/helix-eslint-config/issues/224)) ([f66bdf2](https://github.com/adobe/helix-eslint-config/commit/f66bdf20b1bd78f9d4e878e1b8824e727955b86b))
+
+## [2.0.8](https://github.com/adobe/helix-eslint-config/compare/v2.0.7...v2.0.8) (2024-10-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to v2.31.0 ([bbdda61](https://github.com/adobe/helix-eslint-config/commit/bbdda61baf718e17413588cf73f2aea194a2360d))
+
+## [2.0.7](https://github.com/adobe/helix-eslint-config/compare/v2.0.6...v2.0.7) (2024-09-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to v2.30.0 ([39f0aa1](https://github.com/adobe/helix-eslint-config/commit/39f0aa1dcb38d0c568056988674e1a0b46eabf1c))
+
 ## [2.0.6](https://github.com/adobe/helix-eslint-config/compare/v2.0.5...v2.0.6) (2024-02-01)
 
 
