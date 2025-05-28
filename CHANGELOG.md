@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/adobe/helix-eslint-config/compare/v2.0.9...v3.0.0) (2025-05-28)
+
+
+### Features
+
+* Create configuration for eslint v9 ([#230](https://github.com/adobe/helix-eslint-config/issues/230)) ([b5153ff](https://github.com/adobe/helix-eslint-config/commit/b5153ffe40024bba9d47fb1f5f433651c718e9b0))
+
+
+### BREAKING CHANGES
+
+* requires eslint v9
+
 ## [2.0.9](https://github.com/adobe/helix-eslint-config/compare/v2.0.8...v2.0.9) (2025-02-06)
 
 
