@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/adobe/helix-eslint-config#readme",
   "dependencies": {
+    "@eslint/config-helpers": "0.2.2",
     "eslint-plugin-import": "2.31.0",
     "globals": "15.3.0"
   },

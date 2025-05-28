@@ -1,5 +1,5 @@
 /*
- * Copyright 202 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,6 +10,7 @@
  * governing permissions and limitations under the License.
  */
 import globals from 'globals';
+import { defineConfig } from '@eslint/config-helpers';
 
 import bestPractices from './rules/best-practices.js';
 import errors from './rules/errors.js';
@@ -22,13 +23,14 @@ import strict from './rules/strict.js';
 
 import header from './rules/header.js';
 
-const common = {
+const base = {
   languageOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',
     globals: {
       ...globals.node,
       ...globals.es6,
+      __rootdir: true,
     },
     parserOptions: {
       ...es6.languageOptions.parserOptions,
@@ -77,6 +79,7 @@ const common = {
     'no-unused-vars': ['error', {
       argsIgnorePattern: '^_$',
       varsIgnorePattern: '^_$',
+      caughtErrors: 'none',
     }],
 
     'no-shadow': ['error', {
@@ -84,7 +87,7 @@ const common = {
     }],
 
     // don't enforce extension rules
-    'import/extensions': [2, 'ignorePackages'],
+    'import/extensions': ['error', 'ignorePackages'],
 
     // enforce license header
     'header/header': ['error', {
@@ -110,23 +113,34 @@ const common = {
   settings: {
     ...imports.settings,
   },
-  files: ['**/*.js'],
   linterOptions: {
     reportUnusedDisableDirectives: 'off',
   },
 };
 
 const source = {
+  ...base,
   files: ['src/**/*.js', 'test/dev/*.mjs'],
 };
 
 const test = {
+  ...base,
+  files: ['test/**/*.js'],
   languageOptions: {
+    ...base.languageOptions,
     globals: {
+      ...base.languageOptions.globals,
       ...globals.mocha,
+      __testdir: true,
     },
   },
-  files: ['test/**/*.js'],
 };
 
-export { common, source, test };
+const recommended = defineConfig([
+  source,
+  test,
+]);
+
+export {
+  base, source, test, recommended,
+};

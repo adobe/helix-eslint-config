@@ -9,8 +9,12 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-import { common } from './index.js';
+import { defineConfig } from '@eslint/config-helpers';
+import { base } from './index.js';
 
-export default [
-  common,
-];
+export default defineConfig(
+  {
+    files: ['**/*.js'],
+    extends: [base],
+  },
+);
