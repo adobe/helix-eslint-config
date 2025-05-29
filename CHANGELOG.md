@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/adobe/helix-eslint-config/compare/v3.0.0...v3.0.1) (2025-05-29)
+
+
+### Bug Fixes
+
+* missing header should end processing ([e077281](https://github.com/adobe/helix-eslint-config/commit/e077281f10900f51a5987b878366e0e8ed0a251e))
+
 # [3.0.0](https://github.com/adobe/helix-eslint-config/compare/v2.0.9...v3.0.0) (2025-05-28)
 
 
