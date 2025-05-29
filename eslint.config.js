@@ -10,11 +10,13 @@
  * governing permissions and limitations under the License.
  */
 import { defineConfig } from '@eslint/config-helpers';
-import { base } from './index.js';
+import { recommended } from './index.js';
 
 export default defineConfig(
   {
+    extends: [recommended],
+  },
+  {
     files: ['**/*.js'],
-    extends: [base],
   },
 );

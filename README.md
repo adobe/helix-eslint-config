@@ -6,11 +6,11 @@ ESLint config used in helix projects.
 
 ### For ESLint v9.x
 
-In your `eslint.config.js`, import the `recommended` settings and add your ignores, e.g.:
+In your `eslint.config.js`, import the `recommended` settings, `source` and `test` configurations and add your ignores, e.g.:
 
 ```
 import { defineConfig, globalIgnores } from '@eslint/config-helpers'
-import { recommended } from '@adobe/eslint-config-helix';
+import { recommended, source, test } from '@adobe/eslint-config-helix';
 
 export default defineConfig([
   globalIgnores([
@@ -21,6 +21,8 @@ export default defineConfig([
   {
     extends: [recommended],
   },
+  source,
+  test,
 ]);
 ```
 

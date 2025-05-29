@@ -87,6 +87,7 @@ export default {
               node,
               messageId: 'missingHeader',
             });
+            return;
           }
           const { options: [{ block }] } = context;
           if (!headerMatches(block, headerComment)) {

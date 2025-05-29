@@ -10,7 +10,6 @@
  * governing permissions and limitations under the License.
  */
 import globals from 'globals';
-import { defineConfig } from '@eslint/config-helpers';
 
 import bestPractices from './rules/best-practices.js';
 import errors from './rules/errors.js';
@@ -23,7 +22,7 @@ import strict from './rules/strict.js';
 
 import header from './rules/header.js';
 
-const base = {
+const recommended = {
   languageOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',
@@ -105,7 +104,6 @@ const base = {
         ' ',
       ],
     }],
-
     'id-match': ['error', '^(?!.*?([wW][hH][iI][tT][eE]|[bB][lL][aA][cC][kK]).*[lL][iI][sS][tT]).*$', {
       properties: true,
     }],
@@ -116,31 +114,25 @@ const base = {
   linterOptions: {
     reportUnusedDisableDirectives: 'off',
   },
+  ignores: ['eslint.config.js', '.releaserc.cjs'],
 };
 
 const source = {
-  ...base,
   files: ['src/**/*.js', 'test/dev/*.mjs'],
 };
 
 const test = {
-  ...base,
   files: ['test/**/*.js'],
   languageOptions: {
-    ...base.languageOptions,
+    ...recommended.languageOptions,
     globals: {
-      ...base.languageOptions.globals,
+      ...recommended.languageOptions.globals,
       ...globals.mocha,
       __testdir: true,
     },
   },
 };
 
-const recommended = defineConfig([
-  source,
-  test,
-]);
-
 export {
-  base, source, test, recommended,
+  source, test, recommended,
 };
