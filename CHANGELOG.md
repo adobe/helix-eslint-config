@@ -1,3 +1,10 @@
+## [3.0.8](https://github.com/adobe/helix-eslint-config/compare/v3.0.7...v3.0.8) (2025-07-09)
+
+
+### Bug Fixes
+
+* allow https in copyright ([#237](https://github.com/adobe/helix-eslint-config/issues/237)) ([d2157de](https://github.com/adobe/helix-eslint-config/commit/d2157dec99edc3d8c64cd587f7c8c86778d6f230))
+
 ## [3.0.7](https://github.com/adobe/helix-eslint-config/compare/v3.0.6...v3.0.7) (2025-07-08)
 
 
