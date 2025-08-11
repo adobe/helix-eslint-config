@@ -1,3 +1,10 @@
+## [3.0.9](https://github.com/adobe/helix-eslint-config/compare/v3.0.8...v3.0.9) (2025-08-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/config-helpers to v0.3.1 ([#239](https://github.com/adobe/helix-eslint-config/issues/239)) ([ef45cd8](https://github.com/adobe/helix-eslint-config/commit/ef45cd8f04cbb690fcd57b2ae7133fd45d3959de))
+
 ## [3.0.8](https://github.com/adobe/helix-eslint-config/compare/v3.0.7...v3.0.8) (2025-07-09)
 
 
