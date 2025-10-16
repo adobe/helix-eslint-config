@@ -1,3 +1,10 @@
+## [3.0.12](https://github.com/adobe/helix-eslint-config/compare/v3.0.11...v3.0.12) (2025-10-16)
+
+
+### Bug Fixes
+
+* update semantic-release to v25 and node to 24.x for OIDC ([f994290](https://github.com/adobe/helix-eslint-config/commit/f99429087b7125c976c2c5de7ff6e5a52424bc68))
+
 ## [3.0.11](https://github.com/adobe/helix-eslint-config/compare/v3.0.10...v3.0.11) (2025-10-06)
 
 
