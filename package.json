@@ -28,7 +28,7 @@
   "dependencies": {
     "@eslint/config-helpers": "0.5.1",
     "eslint-plugin-import": "2.32.0",
-    "globals": "17.0.0"
+    "globals": "17.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
