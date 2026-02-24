@@ -1,3 +1,10 @@
+## [3.0.20](https://github.com/adobe/helix-eslint-config/compare/v3.0.19...v3.0.20) (2026-02-24)
+
+
+### Bug Fixes
+
+* **deps:** allow eslint 9 *and* 10 ([#255](https://github.com/adobe/helix-eslint-config/issues/255)) ([6219521](https://github.com/adobe/helix-eslint-config/commit/6219521c618aee271f73f7305cc4a241b8ea3c3c))
+
 ## [3.0.19](https://github.com/adobe/helix-eslint-config/compare/v3.0.18...v3.0.19) (2026-02-16)
 
 
