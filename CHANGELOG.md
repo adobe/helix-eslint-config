@@ -1,3 +1,10 @@
+## [3.0.21](https://github.com/adobe/helix-eslint-config/compare/v3.0.20...v3.0.21) (2026-02-24)
+
+
+### Bug Fixes
+
+* revert allowing ESLint v10 (eslint-plugin-import still requires v9 or smaller) ([b883f4b](https://github.com/adobe/helix-eslint-config/commit/b883f4b4b32d1d5550b09265d949c8d4dc65f747))
+
 ## [3.0.20](https://github.com/adobe/helix-eslint-config/compare/v3.0.19...v3.0.20) (2026-02-24)
 
 
