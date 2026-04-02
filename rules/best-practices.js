@@ -39,7 +39,7 @@ export default {
 
     // specify curly brace conventions for all control statements
     // https://eslint.org/docs/rules/curly
-    curly: ['error', 'multi-line'], // multiline
+    curly: ['error', 'all'],
 
     // require default case in switch statements
     // https://eslint.org/docs/rules/default-case
