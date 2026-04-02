@@ -1,3 +1,10 @@
+## [3.0.24](https://github.com/adobe/helix-eslint-config/compare/v3.0.23...v3.0.24) (2026-04-02)
+
+
+### Bug Fixes
+
+* restrict curl to all ([6d27e92](https://github.com/adobe/helix-eslint-config/commit/6d27e92e061b8f3a00eb196e4ef40075c17bfa1d))
+
 ## [3.0.23](https://github.com/adobe/helix-eslint-config/compare/v3.0.22...v3.0.23) (2026-03-23)
 
 
