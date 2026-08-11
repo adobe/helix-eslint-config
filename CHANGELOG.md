@@ -1,3 +1,10 @@
+## [3.0.30](https://github.com/adobe/helix-eslint-config/compare/v3.0.29...v3.0.30) (2026-08-11)
+
+
+### Bug Fixes
+
+* **deps:** update external fixes ([#270](https://github.com/adobe/helix-eslint-config/issues/270)) ([c7fc738](https://github.com/adobe/helix-eslint-config/commit/c7fc7382b8953aaf8f81e1463e81d90d1817add7))
+
 ## [3.0.29](https://github.com/adobe/helix-eslint-config/compare/v3.0.28...v3.0.29) (2026-07-14)
 
 
