@@ -1,3 +1,10 @@
+## [3.0.33](https://github.com/adobe/helix-eslint-config/compare/v3.0.32...v3.0.33) (2026-10-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency globals to v17.13.0 ([#276](https://github.com/adobe/helix-eslint-config/issues/276)) ([60fa298](https://github.com/adobe/helix-eslint-config/commit/60fa298e8280bcb44017f9c7b24c6365535d2e0f))
+
 ## [3.0.32](https://github.com/adobe/helix-eslint-config/compare/v3.0.31...v3.0.32) (2026-09-22)
 
 
