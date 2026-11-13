@@ -30,14 +30,21 @@ function headerMatches(expected, actual) {
 }
 
 /**
- * Returns the header comment.
+ * Returns the header comment, i.e. the first block comment that precedes the first token
+ * of the program (ignoring a leading shebang).
+ *
+ * Note: we cannot use `sourceCode.getCommentsBefore(program)`, since some parsers (e.g.
+ * `@typescript-eslint/parser` >= 8.72) include leading comments in the `Program` range.
  *
  * @param {Program} program program node
  * @param {import('eslint').Rule.RuleContext} context rule context
  * @returns header comment or null
  */
 function getHeaderComment(program, context) {
-  const comments = context.sourceCode.getCommentsBefore(program);
+  const { sourceCode } = context;
+  const firstToken = sourceCode.getFirstToken(program);
+  const comments = sourceCode.getAllComments()
+    .filter((comment) => !firstToken || comment.range[1] <= firstToken.range[0]);
   if (!comments.length) {
     return null;
   }
