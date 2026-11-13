@@ -1,3 +1,10 @@
+## [3.0.34](https://github.com/adobe/helix-eslint-config/compare/v3.0.33...v3.0.34) (2026-11-13)
+
+
+### Bug Fixes
+
+* **header:** find header comment independent of Program range ([df8f1e8](https://github.com/adobe/helix-eslint-config/commit/df8f1e8ae5b1967bcca9b3c27b0483f9c1bd7ca7)), closes [typescript-eslint/typescript-eslint#12991](https://github.com/typescript-eslint/typescript-eslint/issues/12991)
+
 ## [3.0.33](https://github.com/adobe/helix-eslint-config/compare/v3.0.32...v3.0.33) (2026-10-20)
 
 
